@@ -1,0 +1,251 @@
+/*
+Theme Name: Ever AFter
+Template: forever
+*/
+
+@import url('../forever/rtl.css');
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+
+/* =Structure
+----------------------------------------------- */
+
+#primary {
+	float: none;
+	margin: 0;
+}
+#content {
+	margin: 0 5.52147239%;
+}
+#secondary {
+	float: none;
+	margin-right: auto;
+	margin-left: 0;
+}
+#supplementary {
+	margin: 0 5.52147239%;
+	max-width: 870px;
+	padding: 0;
+}
+#supplementary.two .widget-area {
+	margin-right: auto;
+	margin-left: 2.06896551%;
+}
+#supplementary.three .widget-area {
+	margin-right: auto;
+	margin-left: 2.06896551%;
+}
+#supplementary.four .widget-area {
+	margin-right: auto;
+	margin-left: 2.06896551%;
+}
+/* Alignment */
+.alignleft {
+	margin-right: 1.5em;
+}
+.alignright {
+	margin-left: 1.5em;
+}
+
+
+/* =Global
+----------------------------------------------- */
+
+/* Text elements */
+
+ul {
+	margin: 0 1.1em 1.5em 0;
+}
+ol {
+	list-style: decimal-leading-zero;
+	margin: 0 2em 1.5em 0;
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin-right: 1.15em;
+	margin-left: auto;
+}
+
+
+/* =Header
+----------------------------------------------- */
+
+
+/* =Menu
+----------------------------------------------- */
+
+.site-navigation {
+	float: right;
+}
+.main-navigation ul {
+	clear: right;
+	float: left;
+	left: 50%;
+	right: auto;
+	padding-right: 0;
+}
+.main-navigation li {
+	float: right;
+	right: 50%;
+	left: auto;
+}
+.main-navigation ul ul {
+	left: auto;
+	right: 10px;
+}
+.main-navigation ul ul li {
+	float: right;
+	right: 0;
+	text-align: right;
+}
+.main-navigation ul ul ul {
+	float: right;
+	left: auto;
+	right: 200px;
+}
+/* Small menu */
+.main-small-navigation ul ul {
+	margin: 0 1.5em 0 0;
+}
+
+/* =Content
+----------------------------------------------- */
+
+/* Featured posts */
+.feature-title a {
+	right: 10px;
+	left: auto;
+	bottom: 49px;
+}
+/* Main content */
+#main {
+	float: none;
+}
+.entry-thumb {
+	float: none;
+}
+.entry-title {
+	margin-left: 70px;
+	margin-right: 70px;
+}
+.comments-link {
+	left: 0;
+}
+.entry-content td,
+.comment-content td {
+	padding: 6px 0 6px 10px;
+}
+footer.entry-meta .edit-link:before {
+	content: '\2022';
+	margin-right: 0;
+	margin-left: 3px;
+	position: relative;
+}
+/* Image Posts */
+.indexed .format-image .comments-link {
+	left: auto;
+	right: 0;
+}
+.format-gallery .entry-summary p + p {
+	text-align: right;
+}
+/* 404 */
+/* Image attachments */
+
+
+/* =Media
+----------------------------------------------- */
+
+
+/* =Navigation
+----------------------------------------------- */
+
+
+/* =Comments
+----------------------------------------------- */
+
+li.comment {
+	margin: 1.5em 0;
+	padding: 0 5.5em 0 0;
+}
+#comments .avatar {
+	top: 0;
+}
+#comments .children li.comment {
+	padding: 0 3em 0 0;
+}
+#comments li.comment #respond h3 {
+	text-align: right;
+}
+#respond input {
+	max-width: 100%;
+}
+
+
+/* =Widgets
+----------------------------------------------- */
+
+.widget select {
+	max-width: 98%;
+	margin-right: 1px;
+	margin-left: 0;
+}
+#supplementary .widget > ul {
+	margin-right: 1.2em;
+	margin-left: 0;
+}
+/* Authors Widget */
+#supplementary .widget_authors > ul {
+	margin-right: 0;
+}
+.widget_authors img {
+	float: right;
+	margin-right: 0;
+	margin-left: 5px;
+}
+/* Caledar widget*/
+.widget_calendar #wp-calendar {
+	border-width: 1px 1px 1px 0;
+}
+.widget_calendar #wp-calendar thead th,
+.widget_calendar #wp-calendar tbody td {
+	border-width: 0 0 1px 1px;
+}
+.widget_calendar #wp-calendar tfoot td#prev {
+	padding: 0.3em 0.2em 0.1em 0;
+}
+.widget_calendar #wp-calendar tfoot td#next {
+	padding: 0.3em 0 0.1em 0.2em;
+}
+
+/* =Footer
+----------------------------------------------- */
+
+/* =WP.com
+----------------------------------------------- */
+
+/* =Responsive Layout
+----------------------------------------------- */
+
+
+@media only screen and ( max-width: 750px ) {
+	#supplementary.two .widget-area,
+	#supplementary.three .widget-area,
+	#supplementary.four .widget-area {
+		margin-left: 0;
+		width: 100%;
+	}
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	.feature-title a {
+		font-size: 70%;
+		right: 3px;
+		left: auto;
+		bottom: 20px;
+		padding: 5px 20px 3px
+	}
+}
