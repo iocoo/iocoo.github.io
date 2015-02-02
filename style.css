@@ -1488,6 +1488,16 @@ img#wpstats {
 	}
 }
 
+.gigi-middle {
+    color: #e693a2;
+	height: 36px;
+	margin: 0 31px;
+	max-width: 808px;
+	overflow: hidden;
+	position: relative;
+    text-align:center;
+	z-index: 5;
+}
 
 /* Internet Explorer
 ----------------------------------------------- */
