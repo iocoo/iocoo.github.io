@@ -291,7 +291,8 @@ a:hover {
 	display: block;
 }
 #site-title {
-	font-family: 'Pacifico', cursive;
+/*	font-family: 'Pacifico', cursive;  */
+        font-family:'Oswald',cursive;
 	font-size: 50px;
 	font-size: 5.0rem;
 	line-height: 1.2em;
