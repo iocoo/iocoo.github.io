@@ -1489,7 +1489,8 @@ img#wpstats {
 }
 
 .gigi-middle {
-    color: #e693a2;
+    font-family: 'Pacifico', cursive;
+    color: #a9c3c6;
 	height: 36px;
 	margin: 0 31px;
 	max-width: 808px;
