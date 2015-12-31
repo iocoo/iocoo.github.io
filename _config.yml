@@ -18,7 +18,7 @@ twitter_username: gigiwangs
 github_username: iocoo 
 
 # Build settings
-#markdown: kramdown
-#redcarpet:
-#    extensions: [ "fenced_code_blocks", "hard_wrap","autolink", "tables", "strikethrough", "superscript", "with_toc_data", "highlight", "prettify","no_intra_emphasis"]
-#paginate: 10
+markdown: kramdown
+redcarpet:
+    extensions: [ "fenced_code_blocks", "hard_wrap","autolink", "tables", "strikethrough", "superscript", "with_toc_data", "highlight", "prettify","no_intra_emphasis"]
+paginate: 10
