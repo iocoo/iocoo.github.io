@@ -21,4 +21,4 @@ github_username: iocoo
 markdown: kramdown
 redcarpet:
     extensions: [ "fenced_code_blocks", "hard_wrap","autolink", "tables", "strikethrough", "superscript", "with_toc_data", "highlight", "prettify","no_intra_emphasis"]
-paginate: 10
+#paginate: 10
