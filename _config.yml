@@ -19,5 +19,5 @@ github_username: iocoo
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+#permalink: pretty
 #paginate: 10
