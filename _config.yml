@@ -44,7 +44,7 @@ lsi:         false
 excerpt_separator: "\n\n"
 incremental: false
 # Outputting
-permalink:     /:title.html
+#permalink:     date
 paginate_path: /page:num
 timezone:      null
 
