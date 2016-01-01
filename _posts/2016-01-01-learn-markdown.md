@@ -35,7 +35,7 @@ Markdown 语法说明 (简体中文版) / ([点击查看快速入门](./basic.ht
     *   [特殊字符自动转换](#autoescape)
 *   [区块元素](#block)
     *   [段落和换行](#p)
-    *   [标题](#header)
+    *   [标题](# header)
     *   [区块引用](#blockquote)
     *   [列表](#list)
     *   [代码区块](#precode)
@@ -153,8 +153,6 @@ Markdown 将会把它转换为：
 
   [bq]: #blockquote
   [l]:  #list
-
-<h3 id="header">标题</h3>
 
 Markdown 支持两种标题的语法，类 [Setext] [1] 和类 [atx] [2] 形式。
 
