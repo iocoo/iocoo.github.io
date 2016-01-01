@@ -1,6 +1,6 @@
 ---
 author: GIGI WANG
-title: Over work on the First day of 2016
+title: Leaning Markdown-Over work on the First day of 2016
 layout: post
 date: 2016-01-01 16:22:00 +0800
 ---
