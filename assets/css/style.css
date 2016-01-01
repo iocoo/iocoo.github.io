@@ -405,6 +405,12 @@
 		color: #999 !important;
 		opacity: 1.0;
 	}
+	
+/*content*/
+  .text-con{
+       background: #fff;
+       text-align:left;
+    }
 
 /* Box */
 	.box {
