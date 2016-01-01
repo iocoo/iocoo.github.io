@@ -5,9 +5,7 @@ layout: post
 	<section class="box special">
 		<h3>{{ page.title }}</h3>
 		<span class="date">{{ page.date | date_to_string }}</span>
-		<div class="special">
-		{{ post.content }}
-		</div>
+		{{ post.content | remove: '<p>' | remove: '</p>' }}
 	</section>
 	<div id="disqus_thread"></div>
 	<script>
