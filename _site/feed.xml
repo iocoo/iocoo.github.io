@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GIGI WANG Jekyll!</title>
+    <title>Your awesome title</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
-    <link>http://gejoin.com/</link>
-    <atom:link href="http://gejoin.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 30 Dec 2015 21:04:04 +0800</pubDate>
-    <lastBuildDate>Wed, 30 Dec 2015 21:04:04 +0800</lastBuildDate>
+    <link>http://yourdomain.com/</link>
+    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 01 Jan 2016 13:13:21 +0800</pubDate>
+    <lastBuildDate>Fri, 01 Jan 2016 13:13:21 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -27,59 +27,14 @@
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 30 Dec 2015 19:21:59 +0800</pubDate>
-        <link>http://gejoin.com/jekyll/update/2015/12/30/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://gejoin.com/jekyll/update/2015/12/30/welcome-to-jekyll.html</guid>
+        <pubDate>Fri, 01 Jan 2016 13:12:12 +0800</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2016/01/01/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2016/01/01/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
         
         <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>Ullamco Laboris minim veniam</title>
-        <description>&lt;p class=&quot;image featured&quot;&gt;&lt;img src=&quot;/assets/images/pic03.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;consectetur-tempor-ut-dolore&quot;&gt;Consectetur tempor ut dolore&lt;/h3&gt;
-
-&lt;p&gt;Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 31 Aug 2014 00:00:00 +0800</pubDate>
-        <link>http://gejoin.com/2014/08/31/hello-word.html</link>
-        <guid isPermaLink="true">http://gejoin.com/2014/08/31/hello-word.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Sunt in culpa qui</title>
-        <description>&lt;p&gt;&lt;span class=&quot;image featured&quot;&gt;&lt;img src=&quot;/assets/images/pic01.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h3&gt;Sed lorem adipiscing&lt;/h3&gt;
-&lt;p&gt;Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.&lt;/p&gt;
-&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 25 Aug 2014 00:00:00 +0800</pubDate>
-        <link>http://gejoin.com/2014/08/25/test-post.html</link>
-        <guid isPermaLink="true">http://gejoin.com/2014/08/25/test-post.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Lorem Ipsum Dolor Sit Amet</title>
-        <description>&lt;p&gt;&lt;span class=&quot;image featured&quot;&gt;&lt;img src=&quot;/assets/images/pic02.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h3&gt;Non aute irure&lt;/h3&gt;
-&lt;p&gt;Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.&lt;/p&gt;
-&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 20 Aug 2014 00:00:00 +0800</pubDate>
-        <link>http://gejoin.com/2014/08/20/another-post.html</link>
-        <guid isPermaLink="true">http://gejoin.com/2014/08/20/another-post.html</guid>
-        
         
       </item>
     
