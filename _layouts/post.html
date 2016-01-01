@@ -1,11 +1,8 @@
----
-layout: post
----
 {% include header.html %}
 	<section class="box special">
 		<h3>{{ page.title }}</h3>
 		<span class="date">{{ page.date | date_to_string }}</span>
-		{{ post.content | remove: '<p>' | remove: '</p>' }}
+		{{ post.content}}
 	</section>
 	<div id="disqus_thread"></div>
 	<script>
