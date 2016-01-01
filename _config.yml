@@ -21,3 +21,4 @@ github_username: iocoo
 markdown: kramdown
 #permalink: pretty
 #paginate: 10
+safe: true
