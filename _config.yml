@@ -45,7 +45,7 @@ lsi:         false
 excerpt_separator: "\n\n"
 incremental: false
 # Outputting
-permalink:     date
+permalink:     /:title.html
 paginate_path: /page:num
 timezone:      null
 
@@ -66,6 +66,7 @@ kramdown:
   toc_levels:     1..6
   smart_quotes:   lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+  input: GFM
 
   coderay:
     coderay_wrap:              div
