@@ -9,12 +9,12 @@ tags: cics
 
 ###配置CICS###
 
-####配置 CICS REGION:####
+<h3>配置 CICS REGION:</h3>
 
 	cicscp -v start sfs_server SFS_NAME	
 	cicscp -v create region REGION_NAME DefaultFileServer=
 
-####配置 RD:####
+<h3>配置 RD:</h3>
 
 	cicsupdate -c rd -r REGION_NAME XPRecvTimeout=300 
 	cicsupdate -c rd -r REGION_NAME MinServer=30 
@@ -27,8 +27,7 @@ tags: cics
 	cicsupdate -c rd -r REGION_NAME TraceFlagUser=on AllowDebugging=yes
 
 其中 REGION_NAME 需更改为您的 CICS REGION 名称。
-
-####配置 LD：####
+<h3>配置 LD：</h3>
 
 	cicsadd -c ld -r REGION_NAME LD1 TCPAddress="backend_server" TCPService="tran-host" SNAServerTransport=TCP
 
@@ -38,7 +37,7 @@ tags: cics
 	tran-host port_number/tcp
 
 其中 `port_number` 是端口号。请确保此端口号与 `/etc/services` 文件中的其他端口号不冲突。
-####配置环境变量：####
+<h3>配置环境变量：</h3>
 添加以下行,编辑<code>/var/cics_regions/REGION_NAME/environment</code>
 
 	COBPATH=/user/bin:/usr/lpp/cobol/bin:/etc:/usr/sbin:/usr/ucb:$HOME/bin:/usr/bin/X11
@@ -47,27 +46,31 @@ tags: cics
 	COB_CPM_SIZE_MAX=0
 	EXTSHM=ON
 
-####配置 WD：####
+<h3>配置 WD：<h3>
 
 	cicsupdate -c wd -r REGION_NAME MDCL Permanent=no RecoverTerminal=no
 	cicsupdate -c wd -r REGION_NAME MDCI Permanent=no RecoverTerminal=no
 
-####配置 TD:####
+<h3>配置 TD:</h3>
+
 	cicsadd -c td -r REGION_NAME TCCZ ProgName="DFHMIRS" Timeout=5 TWASize=32767
 	cicsadd -c td -r REGION_NAME INQY ProgName="GCCBINQY" Timeout=5 TWASize=32767
 	cicsadd -c td -r REGION_NAME TCCA ProgName="GCCBMMN" Timeout=5 TWASize=32767
 
-####配置 PD:#####
+<h3>配置 PD:</h3>
+
 	cicsadd -c pd -r REGION_NAME GCCBMMN PathName="GCCBMMN" RSLKey=public
 	cicsadd -c pd -r REGION_NAME GCCBINQY PathName="GCCBINQY" RSLKey=public
 	cicsadd -c pd -r REGION_NAME GCCBCOP PathName="GCCBCOP" RSLKey=public
 
-####配置 XAD####
+<h3>配置 XAD</h3>
 
 	cicsadd -c xad -r REGION_NAME cicsdb2 SwitchLoadFile="/usr/lpp/cics/bin/db21pc" XAOpen="DBNAME,USER_ID,PASSWORD"
 
 其中 REGION_NAME、DBNAME、USER_ID 和 PASSWORD 需相应地替换为您环境中的信息。
-####配置 CTG####
+
+<h3>配置 CTG</h3>
+
 要配置 ctg.ini 文件，请在 `/opt/IBM/cicstg/bin/ctg.ini` 文件中添加以下行：
 
 	SECTION SERVER = REGION_name
@@ -84,10 +87,10 @@ tags: cics
     - 运行 cicscli -s 命令以启动 CTG。
     - 可选： 要验证是否已成功启动 CTG，请运行 cicscli -l 命令。
 
-####停止CICS####
-sudo cicscp -v stop region RG02
-####启动CICS####
-sudo cicscp -v start region RG02 StartType=cold
+<h3>停启CICS</h3>
+
+	cicscp -v stop region REGION_name
+	cicscp -v start region REGION_name StartType=cold
 
 
 
