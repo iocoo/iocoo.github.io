@@ -51,21 +51,26 @@ tags: cics
 	EXTSHM=ON
 
 <h3>配置 WD：</h3>
+  
 
 	cicsupdate -c wd -r REGION_NAME MDCL Permanent=no RecoverTerminal=no
 	cicsupdate -c wd -r REGION_NAME MDCI Permanent=no RecoverTerminal=no
+配置WD
 
 <h3>配置 TD:</h3>
 
 	cicsadd -c td -r REGION_NAME TCCZ ProgName="DFHMIRS" Timeout=5 TWASize=32767
 	cicsadd -c td -r REGION_NAME INQY ProgName="GCCBINQY" Timeout=5 TWASize=32767
 	cicsadd -c td -r REGION_NAME TCCA ProgName="GCCBMMN" Timeout=5 TWASize=32767
+TWASize 大小不能忽略。
 
 <h3>配置 PD:</h3>
 
 	cicsadd -c pd -r REGION_NAME GCCBMMN PathName="GCCBMMN" RSLKey=public
 	cicsadd -c pd -r REGION_NAME GCCBINQY PathName="GCCBINQY" RSLKey=public
 	cicsadd -c pd -r REGION_NAME GCCBCOP PathName="GCCBCOP" RSLKey=public
+添加PD 查看和删除PD方法类似。
+
 
 <h3>配置 XAD</h3>
 
@@ -94,6 +99,8 @@ tags: cics
 
 	cicscp -v stop region REGION_name
 	cicscp -v start region REGION_name StartType=cold
+	
+-end
 
 
 
