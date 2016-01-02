@@ -7,7 +7,8 @@ author: GIGI WANG
 tags: cics
 ---
 
-###配置CICS###
+<h2>配置CICS</h2>
+
 
 <h3>配置 CICS REGION:</h3>
 
@@ -27,6 +28,7 @@ tags: cics
 	cicsupdate -c rd -r REGION_NAME TraceFlagUser=on AllowDebugging=yes
 
 其中 REGION_NAME 需更改为您的 CICS REGION 名称。
+
 <h3>配置 LD：</h3>
 
 	cicsadd -c ld -r REGION_NAME LD1 TCPAddress="backend_server" TCPService="tran-host" SNAServerTransport=TCP
@@ -37,7 +39,9 @@ tags: cics
 	tran-host port_number/tcp
 
 其中 `port_number` 是端口号。请确保此端口号与 `/etc/services` 文件中的其他端口号不冲突。
+
 <h3>配置环境变量：</h3>
+
 添加以下行,编辑<code>/var/cics_regions/REGION_NAME/environment</code>
 
 	COBPATH=/user/bin:/usr/lpp/cobol/bin:/etc:/usr/sbin:/usr/ucb:$HOME/bin:/usr/bin/X11
@@ -46,7 +50,7 @@ tags: cics
 	COB_CPM_SIZE_MAX=0
 	EXTSHM=ON
 
-<h3>配置 WD：<h3>
+<h3>配置 WD：</h3>
 
 	cicsupdate -c wd -r REGION_NAME MDCL Permanent=no RecoverTerminal=no
 	cicsupdate -c wd -r REGION_NAME MDCI Permanent=no RecoverTerminal=no
@@ -69,8 +73,7 @@ tags: cics
 
 其中 REGION_NAME、DBNAME、USER_ID 和 PASSWORD 需相应地替换为您环境中的信息。
 
-<h3>配置 CTG</h3>
-
+<h3>配置 CTG：</h3>
 要配置 ctg.ini 文件，请在 `/opt/IBM/cicstg/bin/ctg.ini` 文件中添加以下行：
 
 	SECTION SERVER = REGION_name
