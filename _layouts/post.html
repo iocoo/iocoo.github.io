@@ -1,7 +1,10 @@
 {% include header.html %}
 	<section class="box special">
-		<h3>{{ page.title }}</h3>
-		<span class="date">{{ page.date | date_to_string }}</span>
+	    <header class="major">
+		    <h3>{{ page.title }}</h3>
+		    <span class="date">{{ page.date | date_to_string }} Author: {{ page.author }}</span>
+		    <hr />
+	    </header>
 		 <div class="post-context"">
 		   {{ content }}
 		 </div>

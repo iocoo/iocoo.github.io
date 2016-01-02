@@ -4,7 +4,7 @@ title: Leaning Markdown-Over work on the First day of 2016
 layout: post
 date: 2016-01-01 16:22:00 +0800
 category: Tech
-tags:markdown
+tags: markdown
 ---
 
 Markdown 

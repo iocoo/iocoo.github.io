@@ -7,9 +7,6 @@ author: GIGI WANG
 tags: cics
 ---
 
-<h2>配置CICS</h2>
-
-
 <h3>配置 CICS REGION:</h3>
 
 	cicscp -v start sfs_server SFS_NAME	

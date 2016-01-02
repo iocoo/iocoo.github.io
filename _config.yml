@@ -19,7 +19,7 @@ github_username: iocoo
 
 # Build settings
 markdown: kramdown
-#paginate: 10
+paginate: 2
 defaults:
   -
     scope:
@@ -50,6 +50,7 @@ timezone:      null
 
 quiet:    false
 defaults: []
+gems: [jekyll-paginate]
 
 # Markdown Processors
 rdiscount:
