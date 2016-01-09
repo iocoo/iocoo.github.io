@@ -10,7 +10,7 @@ tags: python,Scrapy
 `sudo pip install Scrapy`
 OSX还是需要额外一些包或升级的，包括：
 
-	cssselect, queuelib, six, w3lib, lxml, Twisted, characteristic, pyasn1, pyasn1-modules, service-identity
+`cssselect, queuelib, six, w3lib, lxml, Twisted, characteristic, pyasn1, pyasn1-modules, service-identity`
 
 幸运的是pip或者easy_install 可以自动为你安装，但是其中的问题：
 >Found existing installation: six 1.4.1
@@ -33,7 +33,7 @@ OSX还是需要额外一些包或升级的，包括：
 >Downloading https://pypi.python.org/packages/source/s/six/>six-1.10.0.tar.gz#md5=34eed507548117b2ab523ab14b2f8b55
 >Processing six-1.10.0.tar.gz
 
->###....
+>....
 
 >Installed /Library/Python/2.7/site-packages/six-1.10.0-py2.7.egg
 >Processing dependencies for six
@@ -41,9 +41,11 @@ OSX还是需要额外一些包或升级的，包括：
 
 继续使用easy_install 安装Scarpy吧:...
 
-	sudo easy_install Scrapy
+'sudo easy_install Scrapy'
+	
 看起来挺顺利..
 可是....
+
 >In file included from src/lxml/lxml.etree.c:323:
 >src/lxml/includes/etree_defs.h:14:10: fatal error: 'libxml/xmlversion.h' file not found
 >\#include "libxml/xmlversion.h"
@@ -57,12 +59,12 @@ OSX还是需要额外一些包或升级的，包括：
 
 看来libxml2 需要额外安装的
 
-	xcode-select --install
+`xcode-select --install`
 	
 以下就顺利完成安装
 
-	sudo pip install Scrapy
+`sudo pip install Scrapy`
 	OR
-	sudo pip easy_install Scrapy
+`sudo pip easy_install Scrapy`
 
 
