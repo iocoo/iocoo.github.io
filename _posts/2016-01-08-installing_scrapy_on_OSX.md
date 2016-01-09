@@ -40,7 +40,7 @@ OSX还是需要额外一些包或升级的，包括：
 
 继续使用easy_install 安装Scarpy吧:...
 
-'sudo easy_install Scrapy'
+`sudo easy_install Scrapy`
 	
 看起来挺顺利..
 可是....
