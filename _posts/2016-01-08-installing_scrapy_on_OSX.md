@@ -4,7 +4,7 @@ title: Install Scrapy on OSX
 layout: post
 date: 2016-01-08 16:35:00 +0800
 category: Tech
-tags: python,Scrapy
+tags: Scrapy
 ---
 顺利的话，一句命令搞定：
 `sudo pip install Scrapy`
