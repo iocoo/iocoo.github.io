@@ -13,6 +13,7 @@ OSX还是需要额外一些包或升级的，包括：
 `cssselect, queuelib, six, w3lib, lxml, Twisted, characteristic, pyasn1, pyasn1-modules, service-identity`
 
 幸运的是pip或者easy_install 可以自动为你安装，但是其中的问题：
+
 >Found existing installation: six 1.4.1
     DEPRECATION: Uninstalling a distutils installed project (six) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
     Uninstalling six-1.4.1:
@@ -32,8 +33,6 @@ OSX还是需要额外一些包或升级的，包括：
 >Best match: six 1.10.0
 >Downloading https://pypi.python.org/packages/source/s/six/>six-1.10.0.tar.gz#md5=34eed507548117b2ab523ab14b2f8b55
 >Processing six-1.10.0.tar.gz
-
->....
 
 >Installed /Library/Python/2.7/site-packages/six-1.10.0-py2.7.egg
 >Processing dependencies for six
