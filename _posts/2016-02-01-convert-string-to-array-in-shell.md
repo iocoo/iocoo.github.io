@@ -35,7 +35,7 @@ divStrArry () {
       echo "$i"
     done
 }
-<pre>
+</pre>
 
 那么有一个需求：使用shell脚本FTP 建立多级目录：包括子目录。不支持mkdir -p的。
 同样直接上代码
