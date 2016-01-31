@@ -25,7 +25,7 @@ divStrArry () {
 </pre>
 方案二：
 
-<code>
+<pre>
 divStrArry () {
     str="$@";
     set -A arr $(echo $str|tr '/' ' '|tr -s ' ')
@@ -35,7 +35,7 @@ divStrArry () {
       echo "$i"
     done
 }
-<code>
+<pre>
 
 那么有一个需求：使用shell脚本FTP 建立多级目录：包括子目录。不支持mkdir -p的。
 同样直接上代码
