@@ -1,3 +1,11 @@
+---
+layout: post
+title: SHELL字符串分隔及FTP多及目录创建
+date: 2016-02-01 05:18:00 +0800
+cacategory: Tech
+author: GIGI WANG
+tags: shell
+---
 废话不说，直接上代码：
 方案一：
 <pre>
