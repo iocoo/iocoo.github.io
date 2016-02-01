@@ -96,7 +96,88 @@ TWASize 大小不能忽略。
 
 	cicscp -v stop region REGION_name
 	cicscp -v start region REGION_name StartType=cold
+
+<h3> TIPS</h3>	
+IPC支持
+
+	EXTSHM=ON
 	
+Db2中出现的超时产生core : Transaction ‘CPMI’, Abend ‘A147’, at ‘???’.
+
+	Set the environment variable DB2NOEXITLIST=yes in DB2 client env.
+   1.Set db2set DB2NOEXITLIST=yes.
+   2.Terminate DB2 and restart the region.
+   
+	Set DB2NOEXITLIST=yes in region's environment
+
+一些错误分析：
+LINK和START调用的主要返回值解释如下：
+1、LINK错误码分析
+ 
+INVREQ(请求非法)
+交易状态不对(有无SYNCONRETURN混用)
+TRANSID全空
+ 
+LENGERR
+DATALENGTH选项为负值
+DATALENGTH选项比LENGTH选项长
+ 
+NOTAUTH
+权限问题
+使用了SYSID选项，但是RSLCheck没有设置为NONE
+ 
+PGMIDERR
+PD不存在
+PD被disabled.
+ 
+ROLLEDBACK
+被LINK的程序无法执行syncpoint
+ 
+SYSIDERR
+CD不存在或错误
+对方域不存在或已经宕机
+网络不通
+在本地TD:timeout时，远端交易还在队列
+通信错误码：15a00002/15a00102
+ 
+TERMERR
+会话失败，TRANSID不存在
+在本地TD:timeout时，远端交易还在运行。通信错误码：15a00007/a0000100
+RD:MaxTClassLim引起的Reject。通信错误码：15a00007/84b6031
+ 
+2、START错误码分析
+ 
+INVREQ(请求非法)
+Hours超范围
+Minutes超范围
+Seconds超范围
+指定REQID但是该TSQ已经存在(在Pool不足时可能出现)
+ 
+IOERR
+SFS满
+ 
+ISCINVREQ
+ISC失败
+ 
+LENGERR
+使用LENGTH(0).
+ 
+NOTAUTH
+权限不足
+使用了SYSID选项，但是RSLCheck没有设置为NONE
+ 
+SYSIDERR
+CD不存在或错误
+对方域不存在或已经宕机
+网络不通
+通信错误码：15a00002/15a00102
+ 
+TERMIDERR
+TERMID选项非法
+ 
+TRANSIDERR
+TRANSID选项非法
+
 -end
 
 
