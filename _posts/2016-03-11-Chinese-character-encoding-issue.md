@@ -6,6 +6,7 @@ cacategory: Coding
 author: GIGI WANG
 tags: coding
 ---
+
 老生常谈的一个问题，汉字编码与解码问题，各种编码就不再复制粘贴了，需要的话维基百科捡起来再看看。
 
 	名称		第一字节				第二字节
