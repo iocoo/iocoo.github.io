@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 汉字使用默认解码出现问题
-date: 2016-03-11 17:32
+date: 2016-03-11 17:32:00 +0800
 cacategory: Tech
 author: GIGI WANG
 tags: coding
