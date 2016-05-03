@@ -9,7 +9,7 @@ tags: python
 [翻译->原文在这里](http://effbot.org/zone/default-values.htm)
 
 
-###Python中的默认参数值
+<h3>Python中的默认参数值</h3>
 
 Python中默认参数值的处理是一些容易绊倒大多数Python新手程序员的事情之一（但通常只会有一次）。
 造成这种困惑的原因是当使用一个可变的对象作为默认值,也就是在某些地方可以被修改的一个值，比如一个list或一个字典。
