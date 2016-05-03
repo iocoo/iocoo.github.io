@@ -10,6 +10,7 @@ tags: python
 
 
 ###Python中的默认参数值
+
 Python中默认参数值的处理是一些容易绊倒大多数Python新手程序员的事情之一（但通常只会有一次）。
 造成这种困惑的原因是当使用一个可变的对象作为默认值,也就是在某些地方可以被修改的一个值，比如一个list或一个字典。
 
@@ -102,7 +103,7 @@ def this_one_must_be_fast(x, sin=math.sin, cos=math.cos):
 细节上是怎么处理的呢？
  当Pyhton执行“def”语句，它会产生一些就绪的片（包括已编译的函数体代码和当前命名空间），创建一个新的函数对象，完成后默认值也将确定。
 一系列不同的可用组件作为函数对象的属性，上面用到的函数:
-<pre>
+<code>
 >>> function.func_name
 'function'
 >>> function.func_code
@@ -113,16 +114,16 @@ def this_one_must_be_fast(x, sin=math.sin, cos=math.cos):
 {'function': <function function at 0x00BF1C30>,
 '__builtins__': <module '__builtin__' (built-in)>,
 '__name__': '__main__', '__doc__': None}
-</pre>
+</code>
 因为你可以访问默认参数，可以修改它们:
-<pre>
+<code>
 >>> function.func_defaults[0][:] = []
 >>> function()
 [1]
 >>> function.func_defaults
 ([1],)
-</pre>
+</code>
 然而，这不是我想要推荐的常规使用方法.
-另外一种重置默认方法是 简单地重新执行同一“def"语句,Python 创建一个新的代码对象绑定，确定默认值，像之前一样分配函数对象到相同的变量。
+另外一种重置默认方法是 简单地重新执行同一"def"语句,Python 创建一个新的代码对象绑定，确定默认值，像之前一样分配函数对象到相同的变量。
 你需要明确你在做什么然后再这样做。
 是的，如果碰巧不是这个函数，可以使用函数类的新模块中创建自己的函数对象。
