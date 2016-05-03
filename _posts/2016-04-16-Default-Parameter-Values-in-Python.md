@@ -13,7 +13,6 @@ tags: python
 
 Python中默认参数值的处理是一些容易绊倒大多数Python新手程序员的事情之一（但通常只会有一次）。
 造成这种困惑的原因是当使用一个可变的对象作为默认值,也就是在某些地方可以被修改的一个值，比如一个list或一个字典。
-
 一个例子:
 <pre>
 >>> def function(data=[]):
@@ -43,11 +42,8 @@ Python中默认参数值的处理是一些容易绊倒大多数Python新手程�
 当其所属的"def"语句被执行，默认参数值就会确定,参看:
 http://docs.python.org/ref/function.html (挂了)
 Python语言参考相应内容
-
-同样注意到“def”是python中一个可执行语句,而且默认参数在“def”语句的环境中被赋值.如果多次执行"def"语句，它将每次创建一个新的函数对象(包括重新计算默认值)。
+  同样注意到“def”是python中一个可执行语句,而且默认参数在“def”语句的环境中被赋值.如果多次执行"def"语句，它将每次创建一个新的函数对象(包括重新计算默认值)。
 我们来看下面的例子。
-
-What to do instead? #
 该怎么做呢？#
 解决方法是这样的,如别人提过的，使用一个占位符,而不是修改默认值。None 就是一个普通值：
 <pre>
@@ -103,26 +99,26 @@ def this_one_must_be_fast(x, sin=math.sin, cos=math.cos):
 细节上是怎么处理的呢？
  当Pyhton执行“def”语句，它会产生一些就绪的片（包括已编译的函数体代码和当前命名空间），创建一个新的函数对象，完成后默认值也将确定。
 一系列不同的可用组件作为函数对象的属性，上面用到的函数:
-<code>
+<pre>
 >>> function.func_name
 'function'
 >>> function.func_code
-<code object function at 00BEC770, file "<stdin>", line 1>
+<code object function at 00BEC770, file "\<stdin\>", line 1>
 >>> function.func_defaults
 ([1, 1, 1],)
 >>> function.func_globals
-{'function': <function function at 0x00BF1C30>,
-'__builtins__': <module '__builtin__' (built-in)>,
+{'function': \<function function at 0x00BF1C30\>,
+'__builtins__': \<module '__builtin__' (built-in)\>,
 '__name__': '__main__', '__doc__': None}
-</code>
+</pre>
 因为你可以访问默认参数，可以修改它们:
-<code>
+<pre>
 >>> function.func_defaults[0][:] = []
 >>> function()
 [1]
 >>> function.func_defaults
 ([1],)
-</code>
+</pre>
 然而，这不是我想要推荐的常规使用方法.
 另外一种重置默认方法是 简单地重新执行同一"def"语句,Python 创建一个新的代码对象绑定，确定默认值，像之前一样分配函数对象到相同的变量。
 你需要明确你在做什么然后再这样做。
