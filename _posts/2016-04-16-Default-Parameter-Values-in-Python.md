@@ -9,13 +9,9 @@ tags: python
 [翻译->原文在这里](http://effbot.org/zone/default-values.htm)
 
 
-Python中的默认参数值
- 
-Python’s handling of default parameter values is one of a few things that tends to trip up most new Python programmers (but usually only once).
-Python中的默认参数值处理给大多数Python新手程序员带来了困惑（但通常只有一次）
-
-What causes the confusion is the behaviour you get when you use a “mutable” object as a default value; that is, a value that can be modified in place, like a list or a dictionary.
-造成这种困惑的原因是当你使用一个可变的对象作为默认值；也就是在某些地方可以被修改的一个值，比如一个list或一个字典。
+###Python中的默认参数值
+Python中默认参数值的处理是一些容易绊倒大多数Python新手程序员的事情之一（但通常只会有一次）。
+造成这种困惑的原因是当使用一个可变的对象作为默认值,也就是在某些地方可以被修改的一个值，比如一个list或一个字典。
 
 一个例子:
 <pre>
@@ -31,66 +27,63 @@ What causes the confusion is the behaviour you get when you use a “mutable” 
 [1, 1, 1]
 </pre>
 
-As you can see, the list keeps getting longer and longer. If you look at the list identity, you’ll see that the function keeps returning the same object:
-
+正如你看到的,这个list变得越来越长。如果查看这个list的identity，会发现函数原来一直返回同一对象：
+<pre>
 >>> id(function())
 12516768
 >>> id(function())
 12516768
 >>> id(function())
 12516768
-The reason is simple: the function keeps using the same object, in each call. The modifications we make are “sticky”.
+</pre>
 
-Why does this happen? #
+这个原因很简单:函数在每次调用中一直使用同一的对象。我们做的修改有“粘性”。
+这是什么鬼?#
+当其所属的"def"语句被执行，默认参数值就会确定,参看:
+http://docs.python.org/ref/function.html (挂了)
+Python语言参考相应内容
 
-Default parameter values are always evaluated when, and only when, the “def” statement they belong to is executed; see:
-
-http://docs.python.org/ref/function.html (dead link)
-
-for the relevant section in the Language Reference.
-
-Also note that “def” is an executable statement in Python, and that default arguments are evaluated in the “def” statement’s environment. If you execute “def” multiple times, it’ll create a new function object (with freshly calculated default values) each time. We’ll see examples of this below.
+同样注意到“def”是python中一个可执行语句,而且默认参数在“def”语句的环境中被赋值.如果多次执行"def"语句，它将每次创建一个新的函数对象(包括重新计算默认值)。
+我们来看下面的例子。
 
 What to do instead? #
-
-The workaround is, as others have mentioned, to use a placeholder value instead of modifying the default value. None is a common value:
-
+该怎么做呢？#
+解决方法是这样的,如别人提过的，使用一个占位符,而不是修改默认值。None 就是一个普通值：
+<pre>
 def myfunc(value=None):
     if value is None:
         value = []
     # modify value here
-If you need to handle arbitrary objects (including None), you can use a sentinel object:
-
+</pre>
+如果需要处理任意对象(包括None),可以使用sentinel对象：
+<pre>
 sentinel = object()
-
 def myfunc(value=sentinel):
     if value is sentinel:
         value = expression
     # use/modify value here
-In older code, written before “object” was introduced, you sometimes see things like
-
-sentinel = ['placeholder']
-used to create a non-false object with a unique identity; [] creates a new list every time it is evaluated.
-
-Valid uses for mutable defaults #
-
-Finally, it should be noted that more advanced Python code often uses this mechanism to its advantage; for example, if you create a bunch of UI buttons in a loop, you might try something like:
-
+</pre>
+在稍旧的代码中,在"object"采用之前，有时可以看到像这样语句
+<code>sentinel = ['placeholder']</code>被用来创建一个拥有唯一标识的Non-false对象;[]每次赋值时都创建一个新的list。
+正确使用可变默认值#
+最后,应该注意到,更多的高级Python代码常常运用这一机制的优势;例如,当在一个循环中创建一批UI按钮，可以尝试这样：
+<pre>
 for i in range(10):
     def callback():
         print "clicked button", i
     UI.Button("button %s" % i, callback)
-only to find that all callbacks print the same value (most likely 9, in this case). The reason for this is that Python’s nested scopes bind to variables, not object values, so all callback instances will see the current (=last) value of the “i” variable. To fix this, use explicit binding:
-
+</pre>
+所有的callback函数打印相同值(这种情况下很可能是9).原因是Python嵌套作用域绑定变量,而不是对象值,因此所有的callback实例都会显示变量“i”的当前值。
+使用explicit绑定来修复这一问题：
+<pre>
 for i in range(10):
     def callback(i=i):
         print "clicked button", i
     UI.Button("button %s" % i, callback)
-The “i=i” part binds the parameter “i” (a local variable) to the current value of the outer variable “i”.
-
-Two other uses are local caches/memoization; e.g.
-
-
+</pre>
+“i=i” 绑定参数“i”(本地变量)到当前外部变量“i”的当前值。
+两种其它使用:本地缓存/记忆使用;例如
+<pre>
 def calculate(a, b, c, memo={}):
     try:
         value = memo[a, b, c] # return already calculated value
@@ -98,20 +91,18 @@ def calculate(a, b, c, memo={}):
         value = heavy_calculation(a, b, c)
         memo[a, b, c] = value # update the memo dictionary
     return value
-(this is especially nice for certain kinds of recursive algorithms)
-
-and, for highly optimized code, local rebinding of global names:
-
+</pre>
+(这对于某些特定的递归算法特别好)
+而且,为了更加优化的代码,使用全局名称的本地重绑定:
+<pre>
 import math
-
 def this_one_must_be_fast(x, sin=math.sin, cos=math.cos):
     ...
-How does this work, in detail? #
-
-When Python executes a “def” statement, it takes some ready-made pieces (including the compiled code for the function body and the current namespace), and creates a new function object. When it does this, it also evaluates the default values.
-
-The various components are available as attributes on the function object; using the function we used above:
-
+</pre>
+细节上是怎么处理的呢？
+ 当Pyhton执行“def”语句，它会产生一些就绪的片（包括已编译的函数体代码和当前命名空间），创建一个新的函数对象，完成后默认值也将确定。
+一系列不同的可用组件作为函数对象的属性，上面用到的函数:
+<pre>
 >>> function.func_name
 'function'
 >>> function.func_code
@@ -122,15 +113,16 @@ The various components are available as attributes on the function object; using
 {'function': <function function at 0x00BF1C30>,
 '__builtins__': <module '__builtin__' (built-in)>,
 '__name__': '__main__', '__doc__': None}
-Since you can access the defaults, you can also modify them:
-
+</pre>
+因为你可以访问默认参数，可以修改它们:
+<pre>
 >>> function.func_defaults[0][:] = []
 >>> function()
 [1]
 >>> function.func_defaults
 ([1],)
-However, this is not exactly something I’d recommend for regular use…
-
-Another way to reset the defaults is to simply re-execute the same “def” statement. Python will then create a new binding to the code object, evaluate the defaults, and assign the function object to the same variable as before. But again, only do that if you know exactly what you’re doing.
-
-And yes, if you happen to have the pieces but not the function, you can use the function class in the new module to create your own function object.
+</pre>
+然而，这不是我想要推荐的常规使用方法.
+另外一种重置默认方法是 简单地重新执行同一“def"语句,Python 创建一个新的代码对象绑定，确定默认值，像之前一样分配函数对象到相同的变量。
+你需要明确你在做什么然后再这样做。
+是的，如果碰巧不是这个函数，可以使用函数类的新模块中创建自己的函数对象。
