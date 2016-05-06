@@ -18,7 +18,7 @@ twitter_username: gigiwangs
 github_username: iocoo 
 
 # Build settings
-markdown: kramdown
+markdown: kramdown 
 paginate: 2
 defaults:
   -
@@ -39,7 +39,14 @@ encoding:     "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Conversion
-markdown:    kramdown
+kramdown:
+    default_lang: bash
+    auto_ids: true
+    footnote_nr: 1
+    entity_output: as_char
+    toc_levels: 1..6
+    smart_quotes: lsquo,rsquo,ldquo,rdquo
+    input: GFM
 lsi:         false
 excerpt_separator: "\n\n"
 incremental: false
