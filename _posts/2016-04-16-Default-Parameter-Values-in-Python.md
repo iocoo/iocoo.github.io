@@ -46,7 +46,8 @@ Python语言参考相应内容
 我们来看下面的例子。
 该怎么做呢？#
 解决方法是这样的,如别人提过的，使用一个占位符,而不是修改默认值。None 就是一个普通值：
-```python
+
+```
 def myfunc(value=None):
     if value is None:
         value = []
