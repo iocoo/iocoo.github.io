@@ -10,6 +10,9 @@ tags: go
 原文: [Go by Example:Command-Line Flags][sc_url]
 
 命令行标识（参数）是一种常用的指定命令行程序选项的方法，例如，在`wc -l`中 “-l” 就是一个命令的参数。
+
+![](http://www.gigiwangs.com/wp-content/uploads/2016/05/golang.png)
+
 Go提供了一个支持基本的命令行参数解析的flag package（包）。我们将使用这个package来实现我们的命令行程序示例。
 
 <pre>
