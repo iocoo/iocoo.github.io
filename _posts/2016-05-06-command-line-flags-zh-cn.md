@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Go语言示例: 命令行参数
-date: 2016-04-28 20:32:00 +0800
+title: Go语言示例:命令行参数
+date: 2016-05-06 15:32:00 +0800
 cacategory: go
 author: GIGI WANG
 tags: go
