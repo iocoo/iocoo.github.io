@@ -39,17 +39,12 @@ encoding:     "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Conversion
-kramdown:
-    default_lang: bash
-    auto_ids: true
-    footnote_nr: 1
-    entity_output: as_char
-    toc_levels: 1..6
-    smart_quotes: lsquo,rsquo,ldquo,rdquo
-    input: GFM
+markdown:    kramdown
+highlighter: rouge
 lsi:         false
 excerpt_separator: "\n\n"
 incremental: false
+
 # Outputting
 #permalink:     date
 paginate_path: /page:num
@@ -67,6 +62,7 @@ redcarpet:
   extensions: []
 
 kramdown:
+  syntax_highlighter: rouge
   auto_ids:       true
   footnote_nr:    1
   entity_output:  as_char
@@ -74,3 +70,11 @@ kramdown:
   smart_quotes:   lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
   input: GFM
+coderay:
+  coderay_wrap:              div
+  coderay_line_numbers:      inline
+  coderay_line_number_start: 1
+  coderay_tab_width:         4
+  coderay_bold_every:        10
+  coderay_css:               style
+

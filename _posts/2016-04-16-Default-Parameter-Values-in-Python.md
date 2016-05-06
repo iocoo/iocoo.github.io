@@ -46,12 +46,12 @@ Python语言参考相应内容
 我们来看下面的例子。
 该怎么做呢？#
 解决方法是这样的,如别人提过的，使用一个占位符,而不是修改默认值。None 就是一个普通值：
-{% highlight python %}
+```python
 def myfunc(value=None):
     if value is None:
         value = []
     # modify value here
-{% endhighlight %}
+```
 如果需要处理任意对象(包括None),可以使用sentinel对象：
 <pre>
 sentinel = object()
