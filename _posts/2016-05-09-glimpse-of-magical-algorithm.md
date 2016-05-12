@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 瞧瞧这神奇的算法
+title: 瞧瞧这神奇的算法I
 date: 2016-05-09 16:12:00 +0800
 cacategory: algorithm
 author: GIGI WANG
@@ -8,6 +8,7 @@ tags: algorithm
 ---
 
 Algorithms are so magical. This is only the tips of the iceberg.
+
 坚持每天记录一点儿，把丢掉的找回来...
 
 <h3>1.欧几里得算法,求最大公约数</h3>
@@ -16,6 +17,7 @@ Algorithms are so magical. This is only the tips of the iceberg.
 
 
  Go语言的实现：
+ 
  （1）循环
 <pre>
 func gcd(x,y int) int {
