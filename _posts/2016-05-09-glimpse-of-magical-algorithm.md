@@ -6,15 +6,11 @@ cacategory: algorithm
 author: GIGI WANG
 tags: algorithm
 ---
-
 Algorithms are so magical. This is only the tips of the iceberg.
-
 坚持每天记录一点儿，把丢掉的找回来...
-
 <h3>1.欧几里得算法,求最大公约数</h3>
   小学数学就学过的，但不是这种算法。详细的描述参考Wikipedia.
   [WIKI:辗转相除法](https://zh.wikipedia.org/wiki/%E8%BC%BE%E8%BD%89%E7%9B%B8%E9%99%A4%E6%B3%95)
-
 
  Go语言的实现：
  
