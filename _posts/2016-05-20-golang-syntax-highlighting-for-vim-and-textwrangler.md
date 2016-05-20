@@ -37,7 +37,9 @@ BBEdit官方网站给出了配置方法，当然测试了免费的TextWrangler �
 >[http://www.barebones.com/support/bbedit/plugin_library.html](http://www.barebones.com/support/bbedit/plugin_library.html)
 
  -1. 在该页面找到Go下载地址下载，或点击这里 [直接下载](http://pine.barebones.com/extensions/Go.plist.zip)。
+ 
  -2. 下载的文件Go.plist.zip 解压成Go.plist。
+ 
  -3. 将该文件放置到```/Users/{USERNAME}/Library/Application Support/TextWrangler/Language Modules```, 重新打开TextWrangler。一切OK。
  
  
