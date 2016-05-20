@@ -34,6 +34,7 @@ tags: golang
 <h3>配置TextWrangler或BBEdit</h3>
 BBEdit官方网站给出了配置方法，当然测试了免费的TextWrangler ，也是可行的。
 官方给出了好多可用的语言供选择，地址在[这里](http://www.barebones.com/support/bbedit/plugin_library.html).可供选择的包括了Erlang,Haskell,Go等等..
+
 >[http://www.barebones.com/support/bbedit/plugin_library.html](http://www.barebones.com/support/bbedit/plugin_library.html)
 
  -1. 在该页面找到Go下载地址下载，或点击这里 [直接下载](http://pine.barebones.com/extensions/Go.plist.zip)。
