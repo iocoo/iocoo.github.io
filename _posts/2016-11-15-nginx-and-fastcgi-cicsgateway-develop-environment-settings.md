@@ -18,10 +18,14 @@ tags: c
  <pre class="brush:bash"># wget http://nginx.org/download/nginx-1.10.2.tar.gz
  # ./configure;make;make install;</pre> 
 这样就可以启动nginx，默认安装在了```/usr/local/nginx```目录下.
+
 * 下载安装spawn-fcgi,可以从Github Lighthtpd项目中下载，也可以直接从[lighttpd.net这里](http://blog.lighttpd.net/articles/2009/09/23/spawn-fcgi-1-6-3-released/)下载。同样可以编译出```Spawn-fcgi```这个可执行程序。ngnix是支持FastCgi的，但是没有这个CGI管理程序。
+
 * 接下来就可以写CGI程序了，可以使用一些现成开源库，当然也可以自己写。
+
 * 安装CICS TRANSACTION GATEWAY，!!!NOTE!!![这玩意基本上支持32系统，安装时也会各种水土不服的，你可能需要32位的jre..]安装开发中可能需要32位支持，比如 <pre class="brush:bash">libXp.i686 
 glibc-devel.i686</pre> --慢慢享受其中的酸爽吧%$%$%.
+
 * 顺利的话应该可以写代码测试一下了。以下代码片段是接受从浏览器提交的表单然后提交CTG请求，编写代码编译。
  <pre class="brush:c"> while (FCGI_Accept() >= 0) {   
         memset(sBufIn,0,sizeof(sBufIn));
