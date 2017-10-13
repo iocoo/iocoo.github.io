@@ -18,7 +18,7 @@ tags: python,go
 * 1.英文书籍[Free-programming-books](https://github.com/EbookFoundation/free-programming-books/blob/f2d40b8c613af08c03b535ca6de15a65f9856518/free-programming-books.md)
 * 2.中文书籍[免费的编程中文书籍索引](https://github.com/justjavac/free-programming-books-zh_CN)
 * 3.[*Github*](https://github.com/) [*stackoverflow*](https://stackoverflow.com/)
-* 4.Git 入门书籍 [Git 简明指南](http://rogerdudler.github.io/git-guide/index.zh.html）
+* 4.Git 入门书籍 [Git 简明指南](http://rogerdudler.github.io/git-guide/index.zh.html)
 * 5.官方原文文档
 * 6.其它书籍和资料
   * [简明Python教程](https://bop.molun.net/) :新版4.0 python3
