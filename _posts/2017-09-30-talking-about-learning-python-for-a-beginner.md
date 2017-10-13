@@ -11,8 +11,9 @@ tags: python,go
 <h3>--题外话</h3>
 
 我还是推荐学习Go语言。<br/>
-公司开始打算用python来做一些东西，而不再只是C。那为什么是Python不是Go呢?这个问题就好比N年前我问为什么不用Python而用Perl...说C已经OUT OF DATE可能并不准确，但至少在蓬勃发展的互联网浪潮里C在开发速度上已经完败。这样话题就不讨论了。（C:不服，我性能好啊！）。<br>已经几年没有用python，再翻看Python恍如隔世，当年还是2.6/2.7的天下，python3还一直被认为不稳定，如今2.7都快out了，标准库越来越多，甚至杂乱臃肿，pypi上的一些库也变得连他娘都不认识了。不得不重新再学习了，同时也给没接触过python的伙伴们分享一下。<br>
-<h3>一些非常有用的资源：</h3>
+公司开始打算用python来做一些东西，而不再只是C。已经几年没有用python，再翻看Python恍如隔世，当年还是2.x的天下，python3还一直被认为不稳定，如今2.7都快out了，各种库越来越多，甚至杂乱臃肿，该怎么选择又成了困扰初学者的问题。pypi上的一些库也变得连他娘都不认识，不得不重新复习下,同时也和没接触过python的伙伴们分享一下。<br>
+首先推荐以下一些有用的学习资源：
+<h3>一些非常有用的资源</h3>
 
 * 1.英文书籍[Free-programming-books](https://github.com/EbookFoundation/free-programming-books/blob/f2d40b8c613af08c03b535ca6de15a65f9856518/free-programming-books.md)
 * 2.中文书籍[免费的编程中文书籍索引](https://github.com/justjavac/free-programming-books-zh_CN)
