@@ -35,7 +35,7 @@ tags: nginx;php
     # make & make install
 ```
 
-4. 安装一些php依赖包，rhel5.6介质中的包很少的，基本的php-fpm也是没有的。
+4.安装一些php依赖包，rhel5.6介质中的包很少的，基本的php-fpm也是没有的。
    可以从以下网站获取rpm包：
    
     https://www.rpmfind.net <br/>
@@ -49,7 +49,7 @@ tags: nginx;php
     libmcrypt-2.5.8-9.el6.x86_64.rpm```
  ```
 
-5. nginx.conf 配置
+5.nginx.conf 配置
 
 ```
     server {
@@ -74,7 +74,7 @@ tags: nginx;php
         }
 ```
 
-6. php 配置
+6.php 配置
   编辑/etc/php.ini
 
 >session.save_path = "/var/lib/php/session"
