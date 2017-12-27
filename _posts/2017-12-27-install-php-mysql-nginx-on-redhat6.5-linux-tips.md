@@ -37,9 +37,10 @@ tags: nginx;php
 
 4. 安装一些php依赖包，rhel5.6介质中的包很少的，基本的php-fpm也是没有的。
    可以从以下网站获取rpm包：
-    https://www.rpmfind.net
-    https://pkgs.org/download 
-    http://rpm.pbone.net/
+   
+    https://www.rpmfind.net <br/>
+    https://pkgs.org/download <br/>
+    http://rpm.pbone.net/ <br/>
 
  ```bash
     php-fpm-5.3.3-26.el6.x86_64.rpm
@@ -76,11 +77,13 @@ tags: nginx;php
 6. php 配置
   编辑/etc/php.ini
 
-```session.save_path = "/var/lib/php/session"
-      session.auto_start = 1
 ```
-​```
-      chmod -R 777 /var/lib/php
+    session.save_path = "/var/lib/php/session"
+    session.auto_start = 1
+```
+
+​```bash
+    # chmod -R 777 /var/lib/php
 ```
 
 7.设置服务开机启动
