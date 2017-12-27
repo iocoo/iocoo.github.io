@@ -77,10 +77,8 @@ tags: nginx;php
 6. php 配置
   编辑/etc/php.ini
 
-```
-    session.save_path = "/var/lib/php/session"
-    session.auto_start = 1
-```
+>session.save_path = "/var/lib/php/session"
+>session.auto_start = 1
 
 ​```bash
     # chmod -R 777 /var/lib/php
