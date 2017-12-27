@@ -14,22 +14,26 @@ tags: nginx;php
 
 1.首先挂载上iso光盘
 
-   ```# mount -o loop -t iso9660 /csys/rhel-server-6.5-x86_64-dvd.iso  /mnt/vcdrom/```
+```bash
+   # mount -o loop -t iso9660 /csys/rhel-server-6.5-x86_64-dvd.iso  /mnt/vcdrom/
+```
 
 2.安装 php mysql
 
-   ```# cd /mnt/vcdrom/Packages/
-     # ls -rlt php* mysql*
-     # rpm -ivh mysql*.rpm --nodeps --force
-     # rpm -ivh php*.rpm --nodeps --force
-   ```
+```bash
+    # cd /mnt/vcdrom/Packages/
+    # ls -rlt php* mysql*
+    # rpm -ivh mysql*.rpm --nodeps --force
+    # rpm -ivh php*.rpm --nodeps --force
+```
 
 3.编译安装nginx
   nginx 安装没什么说的，源码nginx-1.12.2编译安装。
 
-   ```# ./configure
-      # make & make install
-   ```
+```bash 
+    # ./configure
+    # make & make install
+```
 
 4. 安装一些php依赖包，rhel5.6介质中的包很少的，基本的php-fpm也是没有的。
    可以从以下网站获取rpm包：
@@ -37,15 +41,16 @@ tags: nginx;php
     https://pkgs.org/download 
     http://rpm.pbone.net/
 
-    ```php-fpm-5.3.3-26.el6.x86_64.rpm
+ ```bash
+    php-fpm-5.3.3-26.el6.x86_64.rpm
     php-mbstring-5.3.3-26.el6.x86_64.rpm
     php-mcrypt-5.3.3-5.el6.x86_64.rpm
     libmcrypt-2.5.8-9.el6.x86_64.rpm```
-    ```
+ ```
 
 5. nginx.conf 配置
 
-   ```
+```
     server {
             listen       80;
             server_name  localhost;
@@ -66,34 +71,38 @@ tags: nginx;php
                 fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
                 include        fastcgi_params;
         }
-   ```
+```
 
 6. php 配置
   编辑/etc/php.ini
 
-     ```session.save_path = "/var/lib/php/session"
+```session.save_path = "/var/lib/php/session"
       session.auto_start = 1
-     ```
-      ​```
+```
+​```
       chmod -R 777 /var/lib/php
-      ​```
+```
 
 7.设置服务开机启动
 
-   ```# chkconfig php-fpm on
+```
+   # chkconfig php-fpm on
    # chkconfig mysqld on
-   ```
+```
 
 8.启动服务
 
-   ```# service mysqld start 
+```bash
+   # service mysqld start 
    # service php-fpm start
    # /usr/local/nginx/sbin/nginx   
    # mysqladmin -u root password ‘passwd’
-   ```
+```
 
 9.验证nginx以及php服务
-   ```# echo “<?php  echo phpinfo();?>”  > /usr/local/nginx/html/info.php```
+```
+   # echo “<?php  echo phpinfo();?>”  > /usr/local/nginx/html/info.php
+```
 
   打开浏览器输入http://REMOTE/
   打开浏览器输入http://REMOTE/info.php
