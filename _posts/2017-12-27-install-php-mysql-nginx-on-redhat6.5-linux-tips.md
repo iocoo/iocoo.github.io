@@ -86,7 +86,7 @@ tags: nginx;php
 
 7.设置服务开机启动
 
-```
+```bash
    # chkconfig php-fpm on
    # chkconfig mysqld on
 ```
@@ -101,11 +101,12 @@ tags: nginx;php
 ```
 
 9.验证nginx以及php服务
-```
+
+```bash
    # echo “<?php  echo phpinfo();?>”  > /usr/local/nginx/html/info.php
 ```
 
-  打开浏览器输入http://REMOTE/
+  打开浏览器输入http://REMOTE/ <br\>
   打开浏览器输入http://REMOTE/info.php
 
 10.安装phpMyAdmin 
